@@ -1,0 +1,262 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f9fafb;
+    color: #1f2937;
+}
+
+/* ================= HEADER ================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: #1e3a8a;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 45px;
+}
+
+.logo h1 {
+    font-size: 18px;
+}
+
+/* NAV */
+nav ul {
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: #e5e7eb;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    color: #eab308;
+}
+
+/* ================= HERO ================= */
+section:nth-of-type(1) {
+    position: relative;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.sampul img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* overlay */
+section:nth-of-type(1)::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(30, 58, 138, 0.7);
+    z-index: -1;
+}
+
+section:nth-of-type(1) h1 {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+section:nth-of-type(1) p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* ================= PANDUAN ================= */
+section:nth-of-type(2) {
+    padding: 80px 40px;
+    background: #ffffff;
+}
+
+/* HEADER */
+section:nth-of-type(2) h2 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 800;
+}
+
+section:nth-of-type(2) p {
+    text-align: center;
+    color: #6b7280;
+    margin-top: 10px;
+}
+
+/* garis kecil */
+section:nth-of-type(2) > div > div > div {
+    width: 60px;
+    height: 4px;
+    background: #eab308;
+    margin: 15px auto 50px;
+    border-radius: 2px;
+}
+
+.flex-columnt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 500px !important;
+}
+
+/* GRID STEP */
+.flex {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+/* CARD */
+.tuttor-card {
+    text-align: center;
+    position: relative;
+}
+
+/* BULATAN */
+.point {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background: #eff6ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #1e3a8a;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.06);
+}
+
+/* STEP TERAKHIR */
+.tuttor-card:last-child .point {
+    background: #1e3a8a;
+    color: #eab308;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+/* TEXT */
+.tuttor-card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.tuttor-card p {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+/* GARIS ANTAR STEP */
+.tuttor-card::after {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 60%;
+    width: 80%;
+    height: 2px;
+    background: #e5e7eb;
+}
+
+.tuttor-card:last-child::after {
+    display: none;
+}
+
+/* ================= RUANGAN ================= */
+section:nth-of-type(3) {
+    padding: 80px 40px;
+    background: #f3f4f6;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* CARD */
+.room-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.room-card:hover {
+    transform: translateY(-5px);
+}
+
+/* IMAGE */
+.room-img {
+    height: 200px;
+}
+
+.room-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* BODY */
+.deskription-card {
+    padding: 20px;
+}
+
+.deskription-card p {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #6b7280;
+}
+
+/* BUTTON */
+.deskription-card button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    background: #eff6ff;
+    color: #1e3a8a;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.deskription-card button:hover {
+    background: #1e3a8a;
+    color: white;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: #111827;
+    height: 100px;
+}
+

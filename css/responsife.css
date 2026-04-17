@@ -1,0 +1,20 @@
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .flex {
+        grid-template-columns: 1fr;
+    }
+
+    .tuttor-card::after {
+        display: none;
+    }
+
+    section:nth-of-type(3) {
+        grid-template-columns: 1fr;
+    }
+}
